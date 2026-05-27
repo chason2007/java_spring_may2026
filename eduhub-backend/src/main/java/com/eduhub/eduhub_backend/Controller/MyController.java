@@ -1,12 +1,12 @@
-package com.eduhub.eduhub_backend.Controller;
+package com.eduhub.eduhub_backend.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MyController{
+public class MyController {
     @GetMapping("/home")
- public String control(){
-     return "My name is Deepak";
- }
+    public String home() {
+        return "Welcome to the EduHub backend!";
+    }
 }
