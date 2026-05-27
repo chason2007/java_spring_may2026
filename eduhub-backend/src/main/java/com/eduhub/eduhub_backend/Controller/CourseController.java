@@ -2,7 +2,6 @@ package com.eduhub.eduhub_backend.controller;
 
 import com.eduhub.eduhub_backend.model.Course;
 import com.eduhub.eduhub_backend.exception.CourseNotFoundException;
-import com.eduhub.eduhub_backend.exception.CourseAlreadyExistsException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -60,7 +59,7 @@ public class CourseController {
 
         for (Course course : courseList) {
             if (course.getCourseCode().equalsIgnoreCase(newCourse.getCourseCode())) {
-                throw new CourseAlreadyExistsException("Course with code " + newCourse.getCourseCode() + " already exists");
+                throw new IllegalArgumentException("Course with code " + newCourse.getCourseCode() + " already exists");
             }
         }
 
