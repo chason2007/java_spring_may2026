@@ -1,24 +1,21 @@
 package com.eduhub.eduhub_backend.model;
 
 public class User {
-    private String userId;
+    private long userId;
     private String username;
     private String password;
 
-    public User() {
-    }
-
-    public User(String userId, String username, String password) {
+    public User(long userId, String username, String password) {
         this.userId = userId;
         this.username = username;
         this.password = password;
     }
 
-    public String getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
